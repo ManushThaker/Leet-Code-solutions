@@ -1,0 +1,13 @@
+def parity(A):        
+        even=[]
+        odd=[]
+        for i in range(len(A)):
+            if A[i]%2==0:
+                even.append(A[i])
+            else:
+                odd.append(A[i])
+        result=even+odd
+        return result
+        
+A= [3,6,5,8,2,9,7,4]  
+print(parity(A))
