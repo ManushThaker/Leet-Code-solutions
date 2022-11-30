@@ -1,0 +1,12 @@
+def isPalindrome(s):
+    return s == s[::-1]
+ 
+s = "A man, a plan, a canal: Panama"
+f = s.lower()
+a = ''.join(filter(str.isalnum, f))
+ans = isPalindrome(a)
+ 
+if ans:
+    print("true")
+else:
+    print("False")
