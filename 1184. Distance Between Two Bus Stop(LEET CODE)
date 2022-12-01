@@ -1,0 +1,13 @@
+def distanceBetweenBusStops(distance):
+        start = 0
+        destination = 2
+        if start > destination:
+            start, destination =  destination, start
+        
+        d1 = sum(distance[start: destination])
+        d2 = sum(distance[:start]) + sum(distance[destination:])
+        
+        return min(d1, d2)
+        
+distance = [1,2,3,4]
+print(distanceBetweenBusStops(distance))
