@@ -1,0 +1,5 @@
+def reverse_word(s):
+   return ' '.join(s.split()[::-1])[::-1]
+   
+s ="Hello my name is HELLO"
+print(reverse_word(s))
