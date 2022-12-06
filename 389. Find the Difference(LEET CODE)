@@ -1,0 +1,8 @@
+s = "abc"
+t = "abcd"
+
+first_set = set(s)
+second_set = set(t)
+difference = first_set.symmetric_difference(second_set)
+
+print(difference)
