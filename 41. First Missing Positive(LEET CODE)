@@ -1,0 +1,8 @@
+def findMissingPositivfe(Numbers):
+    for i in range(1, len(Numbers)+1):
+        if i not in Numbers:
+         return i
+    return len(Numbers)+1
+    
+Numbers =[7,8,9,11,12]
+print(findMissingPositive(Numbers))
