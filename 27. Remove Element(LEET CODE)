@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[] = {1,1,9,3,4,5,9,9};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int i,j;
+    int num;
+    
+    printf("Array before deleting number:");
+    for(i=0; i<size; i++)
+    printf("%d", arr[i]);
+     
+    printf("\nEnter number to delete:");
+    scanf("%d", &num);
+    
+    for(i=0; i<=size; i++)
+    {
+        if(arr[i]==num)
+        {
+            for(j=i+1; j<=size; j++)
+            arr[j-1]=arr[j];
+        
+        i--;
+        size--;
+    }}
+    printf("\nArray after deleting number:");
+    for(i=0; i<size; i++)
+    {
+       printf("%d", arr[i]); 
+    }
+    return 0;
+    
+}
