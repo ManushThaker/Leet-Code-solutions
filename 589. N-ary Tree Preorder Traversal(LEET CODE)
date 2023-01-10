@@ -1,0 +1,15 @@
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        res=[]
+        q=collections.deque()
+        if root:
+            q.append(root)
+
+        while q:
+            node=q.popleft()
+            res.append(node.val)
+
+            for i in reversed(node.children):
+                q.appendleft(i)
+                
+        return res
