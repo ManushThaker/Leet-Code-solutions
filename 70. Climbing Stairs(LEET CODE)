@@ -1,0 +1,10 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        last=1
+        secondlast=1
+
+        for i in range(n-1):
+            temp=secondlast
+            secondlast=last+secondlast
+            last=temp
+        return secondlast    
