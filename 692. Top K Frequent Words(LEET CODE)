@@ -1,0 +1,10 @@
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        count={}
+
+        for word in words:
+            if word in count:
+                count[word] +=1
+            else:
+                count[word] =1
+        return sorted(count.keys(), key = lambda w:(-count[w],w))[:k]        
