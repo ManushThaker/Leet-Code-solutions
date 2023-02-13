@@ -1,0 +1,11 @@
+class Solution:
+    def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
+        closest_point = -1
+        closest_distance = float('inf') 
+        for i, point in enumerate(points):
+            if point[0] == x or point[1] == y:
+                distance = abs(x - point[0]) + abs(y - point[1])
+                if distance < closest_distance:
+                    closest_distance = distance
+                    closest_point = i
+        return closest_point
