@@ -1,0 +1,14 @@
+class Solution:
+    def sortByBits(self, arr: List[int]) -> List[int]:
+        def count_ones(num):
+            return bin(num).count('1')
+
+        counts = {}
+        for num in arr:
+            counts[num] = count_ones(num)
+        
+        def key_function(x):
+            return (counts[x], x)
+        arr.sort(key=key_function)
+        
+        return arr
